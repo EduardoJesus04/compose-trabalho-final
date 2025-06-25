@@ -1,11 +1,15 @@
-compose-trabalho-final
+# 🐳 Atividade Final - Docker Compose
 
-Arquivo compose para construir a aplicação final Docker da Disciplina de Conteinerização.
+Este repositório contém o arquivo `docker-compose.yaml` para executar a aplicação **Gerenciador de Reportagens**, desenvolvida em Java com Spring Boot e integrada ao banco de dados MongoDB.
 
-Gerenciador de Reportagens
-Aplicação Java + MongoDB para gerenciar reportagens. Esta versão usa Docker Compose.
+## 📦 Como subir a aplicação
 
-Como subir
-docker-compose up -d
+> É necessário ter o **Docker** e o **Docker Compose** instalados.
 
-Acesse: http://localhost:8080
+```bash
+Execute o ambiente:
+docker compose up -d
+
+Acesse a aplicação no navegador:
+
+http://localhost:8080/gerenciador
