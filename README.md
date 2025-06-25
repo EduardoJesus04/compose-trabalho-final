@@ -11,5 +11,4 @@ Execute o ambiente:
 docker compose up -d
 
 Acesse a aplicação no navegador:
-
 http://localhost:8080/gerenciador
