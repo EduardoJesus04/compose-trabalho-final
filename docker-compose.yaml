@@ -1,0 +1,33 @@
+version: '3.8'
+
+networks:
+  minha-rede:
+    driver: bridge
+
+volumes:
+  mongo-data:
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo-db
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - minha-rede
+    restart: unless-stopped
+
+  trabalhofinal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trabalhofinal
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/trabalho1db
+    networks:
+      - minha-rede
+    restart: unless-stopped
