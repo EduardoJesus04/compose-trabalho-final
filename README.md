@@ -1,4 +1,5 @@
 compose-trabalho-final
+
 Arquivo compose para construir a aplicação final Docker da Disciplina de Conteinerização.
 
 Gerenciador de Reportagens
